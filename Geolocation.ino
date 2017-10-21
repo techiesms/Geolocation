@@ -1,19 +1,8 @@
 /*********************************************************************
-  This is an example for our Monochrome OLEDs based on SSD1306 drivers
-
-  Pick one up today in the adafruit shop!
-  ------> http://www.adafruit.com/category/63_98
-
-  This example is for a 128x64 size display using I2C to communicate
-  3 pins are required to interface (2 I2C and one reset)
-
-  Adafruit invests time and resources providing this open source code,
-  please support Adafruit and open-source hardware by purchasing
-  products from Adafruit!
-
-  Written by Limor Fried/Ladyada  for Adafruit Industries.
-  BSD license, check license.txt for more information
-  All text above, and the splash screen must be included in any redistribution
+  This is the code for Fetching your location from Google Geolocation API
+  
+  This code is provided by 
+  techiesms
 *********************************************************************/
 
 #include <SPI.h>
@@ -26,14 +15,14 @@
 #include <ArduinoJson.h>
 #include "ESP8266WiFi.h"
 
-char myssid[] = "SmS";         // your network SSID (name)
-char mypass[] = "sms123458955";          // your network password
+char myssid[] = "SSID";         // your network SSID (name)
+char mypass[] = "PASS";          // your network password
 
 
 //Credentials for Google GeoLocation API...
 const char* Host = "www.googleapis.com";
 String thisPage = "/geolocation/v1/geolocate?key=";
-String key = "AIzaSyCYNXIYINPmTNIdusMjJloS4_BXSOff1_g";
+String key = "YOUR_API_KEY";
 
 int status = WL_IDLE_STATUS;
 String jsonString = "{\n";
